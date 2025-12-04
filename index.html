@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Star Trails Travel Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    
+    :root{
+      --primary:#0066cc;
+      --dark:#0b1e33;
+      --light:#f5f9ff;
+      --accent:#ff7a00;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: var(--light);
+      color:#222;
+      line-height:1.5;
+    }
+
+    header{
+      background: linear-gradient(120deg, var(--dark), var(--primary));
+      color:#fff;
+      text-align:center;
+      padding:24px 12px;
+    }
+    header h1{margin:0 0 6px 0; font-size:28px}
+    header p{margin:0; opacity:0.9}
+
+    nav{
+      background:#074681;
+      text-align:center;
+      padding:10px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 12px;
+      font-weight:bold;
+    }
+    nav a:hover{ text-decoration:underline }
+
+    .container{ width:90%; max-width:1000px; margin:20px auto }
+
+    section{
+      background:#fff;
+      border:1px solid #e6eef8;
+      border-radius:8px;
+      padding:16px;
+      margin-bottom:18px;
+    }
+    section h2{
+      color:var(--primary);
+      margin-top:0;
+    }
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:12px;
+    }
+    .card{
+      border:1px solid #e6eef8;
+      border-radius:8px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .card img{
+      width:100%; height:140px; object-fit:cover; display:block;
+    }
+    .card .content{ padding:12px }
+    .price{ color:var(--accent); font-weight:bold }
+
+    
+    .btn{
+      display:inline-block;
+      padding:8px 12px;
+      background:var(--primary);
+      color:#fff;
+      text-decoration:none;
+      border-radius:6px;
+      margin-top:8px;
+      font-weight:bold;
+    }
+    .btn.secondary{ background:var(--accent) }
+    .btn:hover{ opacity:0.9 }
+
+    
+    form label{ display:block; margin:8px 0 4px }
+    form input, form select, form textarea{
+      width:100%;
+      padding:8px;
+      border:1px solid #cfe0f5;
+      border-radius:6px;
+      background:#f8fbff;
+    }
+    form input[type="submit"]{
+      width:auto;
+      cursor:pointer;
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      margin-top:10px;
+      font-weight:bold;
+    }
+
+    
+    .tips li{
+      margin-bottom:8px;
+    }
+
+  
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap:10px;
+    }
+    .gallery img{
+      width:100%; height:120px; object-fit:cover;
+      border-radius:8px;
+      border:1px solid #e6eef8;
+    }
+
+    
+    footer{
+      text-align:center;
+      padding:16px;
+      color:#fff;
+      background: var(--dark);
+      margin-top:24px;
+    }
+    .sub{ color:#555; font-size:14px }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Star Trails Travel Agency</h1>
+    <p>Your journey begins here — curated tours, easy booking, and trusted travel tips</p>
+  </header>
+
+  <nav>
+    <a href="#packages">Tour packages</a>
+    <a href="#booking">Booking</a>
+    <a href="#tips">Travel tips</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    
+    <section id="packages">
+      <h2>Popular tour packages</h2>
+      <p class="sub">Choose from affordable, beginner-friendly itineraries.</p>
+
+      <div class="grid">
+        <div class="card">
+          <img src="himalayan.jpg" alt="Himalayan trek">
+          <div class="content">
+            <h3>Himalayan Escape (5D/4N)</h3>
+            <p>Manali • Solang • Rohtang. Cozy stays, guided trek, local cuisine.</p>
+            <p class="price">₹21,999 per person</p>
+            <a class="btn" href="#booking">Book now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="goa.jpg" alt="Goa beach">
+          <div class="content">
+            <h3>Goa Beaches (4D/3N)</h3>
+            <p>Baga • Calangute • Old Goa. Beach time, markets, seafood.</p>
+            <p class="price">₹14,499 per person</p>
+            <a class="btn" href="#booking">Book now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Royal-rajasthan-a-cultural-escape.webp" alt="Jaipur forts">
+          <div class="content">
+            <h3>Royal Rajasthan (6D/5N)</h3>
+            <p>Jaipur • Jodhpur • Udaipur. Forts, lakes, heritage walks.</p>
+            <p class="price">₹24,999 per person</p>
+            <a class="btn" href="#booking">Book now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="kerala.jpg" alt="Kerala backwaters">
+          <div class="content">
+            <h3>Kerala Backwaters (5D/4N)</h3>
+            <p>Alleppey • Munnar • Kochi. Houseboat, tea gardens, culture.</p>
+            <p class="price">₹22,499 per person</p>
+            <a class="btn" href="#booking">Book now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="booking">
+      <h2>Booking options</h2>
+      <p class="sub">Fill the form to request a quote. We’ll confirm availability and itinerary details.</p>
+
+      <form>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="+91-XXXXXXXXXX" />
+
+        <label for="package">Select package</label>
+        <select id="package" name="package" required>
+          <option value="">Choose a package</option>
+          <option>Himalayan Escape</option>
+          <option>Goa Beaches</option>
+          <option>Royal Rajasthan</option>
+          <option>Kerala Backwaters</option>
+        </select>
+
+        <label for="dates">Preferred dates</label>
+        <input id="dates" name="dates" type="text" placeholder="e.g., 10–15 Jan 2026" />
+
+        <label for="people">Number of travelers</label>
+        <input id="people" name="people" type="number" min="1" placeholder="2" />
+
+        <label for="notes">Notes / requests</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Any special requests?"></textarea>
+
+        <input type="submit" value="Request booking" />
+      </form>
+
+      <p class="sub">Or call: +91 98765 43210</p>
+    </section>
+
+    
+    <section id="tips">
+      <h2>Travel tips</h2>
+      <ul class="tips">
+        <li><strong>Plan smart:</strong> Book flights and stays at least 3–4 weeks in advance for better prices.</li>
+        <li><strong>Pack light:</strong> Check weather and carry essentials (ID, meds, charger, light jacket).</li>
+        <li><strong>Stay safe:</strong> Keep copies of documents and use official transport providers.</li>
+        <li><strong>Local culture:</strong> Respect customs; try local food and support small businesses.</li>
+        <li><strong>Budgeting:</strong> Track daily spend; set aside cash for souvenirs and emergencies.</li>
+      </ul>
+    </section>
+
+    
+    <section id="gallery">
+      <h2>Gallery: travel destinations</h2>
+      <div class="gallery">
+        <img src="travel.jpg" alt="Manali">
+        <img src="temple.jpg" alt="Goa">
+        <img src="banras.jpg" alt="Jaipur">
+        <img src="bhudda.jpg" alt="Udaipur">
+        <img src="goa2.jpg" alt="Kerala">
+        <img src="taj.jpg" alt="Ladakh">
+      </div>
+    </section>
+
+    
+    <section id="contact">
+      <h2>Contact & support</h2>
+      <p>Email: hello@startrails.example</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Office: Modinagar, UP, India</p>
+      <a class="btn secondary" href="#booking">Plan your trip</a>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Star Trails Travel Agency — All rights reserved
+  </footer>
+
+</body>
+</html>
